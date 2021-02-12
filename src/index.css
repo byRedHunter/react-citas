@@ -1,13 +1,138 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.6rem;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background: rgb(54, 83, 138);
+	color: #eee;
+}
+
+.container {
+	width: 90%;
+	max-width: 110rem;
+	margin: 0 auto;
+	padding: 2rem 1rem;
+	display: grid;
+	grid-template: auto / 1fr;
+	row-gap: 2rem;
+}
+
+h1 {
+	text-align: center;
+	color: rgb(250, 253, 69);
+}
+h3 {
+	color: rgb(210, 185, 255);
+	font-size: 2.2rem;
+	letter-spacing: 0.1rem;
+}
+
+.form {
+	width: 100%;
+	margin-top: 2rem;
+	transition: 0.3s linear;
+}
+
+.form-label {
+	display: block;
+	margin-bottom: 1rem;
+	color: #ddd;
+}
+.form-input {
+	width: 100%;
+	height: 4rem;
+	border: 0.1rem solid rgb(250, 253, 69);
+	border-radius: 0.5rem;
+	background: #ddd;
+	outline: none;
+	padding: 0 1rem;
+	color: #222;
+	margin-bottom: 1.5rem;
+}
+.form-input::placeholder {
+	color: #555;
+}
+textarea.form-input {
+	min-width: 100%;
+	width: 100%;
+	min-height: 15rem;
+	padding: 1rem;
+	font-size: 1.6rem;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-button {
+	display: block;
+	width: 100%;
+	height: 4rem;
+	border-radius: 20rem;
+	border: none;
+	background: rgb(24, 9, 51);
+	color: #eee;
+	outline: none;
+	cursor: pointer;
+	transition: 0.3s linear;
+}
+.form-button:hover {
+	background: rgb(12, 6, 31);
+}
+
+.alerta {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	padding: 2rem;
+	background: rgb(204, 143, 240);
+	margin-top: 1rem;
+	border-radius: 0.5rem;
+	transform-origin: top center;
+	transition: 0.3s linear;
+}
+.alerta-error {
+	background: rgb(173, 56, 56);
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+	row-gap: 2rem;
+}
+.cita {
+	background: rgb(24, 9, 51);
+	padding: 2rem;
+	border-radius: 1rem;
+}
+.cita h3 {
+	text-align: center;
+	margin-bottom: 1rem;
+}
+.cita .button-delete {
+	background: rgb(236, 93, 93);
+	margin-top: 2rem;
+	font-size: 4rem;
+}
+.cita .button-delete:hover {
+	background: rgb(173, 56, 56);
+}
+
+@media screen and (min-width: 760px) {
+	.container {
+		grid-template: 4rem auto / repeat(2, 1fr);
+		column-gap: 4rem;
+	}
+	h1 {
+		grid-column: 1 / 3;
+	}
+	.list {
+		margin-top: 3rem;
+	}
 }
